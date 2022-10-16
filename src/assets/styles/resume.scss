@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-style: normal;
+  font-family: "PingFang SC";
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/PingFang-SC-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-style: normal;
+  font-family: "OpenSans";
+  font-weight: 300;
+  font-display: auto;
+  src: url("../fonts/OpenSans-Light.woff2") format('woff2');
+}
+
+@font-face {
+  font-style: normal;
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/OpenSans-Regular.woff2") format('woff2');
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, PingFang SC, OpenSans, sans-serif;
+  background: #f7f8f9;
+  -webkit-font-smoothing: antialiased;
+
+  @media print {
+    background-color: #ffffff;
+  }
+}
+
+a {
+  color: #008080;
+}
+
+.container {
+  margin: 50px auto;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .1);
+  background: #fff;
+  width: 800px;
+  padding: 30px 40px;
+
+  @media print {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 0;
+
+    div {
+      break-after: always;
+    }
+  }
+}
+
+::-webkit-scrollbar, :hover::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+}
+
+.techs-container {
+  margin: 10px 0;
+}
+
+.tech {
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  line-height: 18px;
+  padding: 0 7px;
+  border: 1px solid #495057;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  color: #495057;
+  background-color: transparent;
+}
+
+section.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+
+  .info-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-size: 1.8em;
+    color: #212529;
+  }
+
+  .status {
+    height: 20px;
+    line-height: 14px;
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #fff;
+    background: #212529;
+  }
+
+  .sub-text {
+    font-size: 14px;
+  }
+
+  .location, .sub-item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .fas {
+    margin-right: 5px;
+  }
+
+  .fas, .phone, .email {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .languages {
+    .language {
+      font-weight: 300;
+      display: inline-block;
+      min-width: 20px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 7px;
+      border-radius: 10px;
+      margin: 0 5px;
+      font-size: 12px;
+      color: #fff;
+      background: #212529;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.section-item {
+  margin: 24px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.section-headerline {
+  flex: 1;
+  height: 1px;
+  background-color: #dee2e6;
+}
+
+section.experiences {
+  .section-content {
+    .section-subitem-header {
+      display: flex;
+      align-items: center;
+
+      .company-name {
+        flex: 1;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 2em;
+        color: #212529;
+      }
+    }
+
+    .sub-text {
+      font-size: 1em;
+      color: #adb5bd;
+    }
+
+    .desc {
+      line-height: 2em;
+    }
+
+    .project-section {
+      margin: 20px 0;
+
+      .project-name {
+        font-size: 1em;
+        color: #495057;
+      }
+
+      .project-desc {
+        margin: 8px 0;
+        line-height: 1.5em;
+        font-size: 14px;
+        color: #868e96;
+      }
+
+      .project-detail {
+        margin: -2px 0 0 18px;
+        font-size: 14px;
+        color: #868e96;
+
+        .detail {
+          line-height: 2em;
+        }
+      }
+    }
+  }
+}
+
+section.personal-projects {
+  .section-content {
+    .project-section {
+      margin: 16px 0;
+
+      .project-name {
+        font-size: 1em;
+        line-height: 1.5em;
+        color: #495057;
+      }
+
+      .project-desc {
+        margin: 8px 0;
+        line-height: 1.5em;
+        font-size: 14px;
+        color: #868e96;
+      }
+
+      .project-detail {
+        margin: 8px 0 5px 18px;
+        font-size: 14px;
+        color: #868e96;
+
+        .detail {
+          line-height: 2em;
+        }
+      }
+    }
+  }
+}
+
+section.education {
+  .section-subitem-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .school-name {
+    flex: 1;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 2em;
+    color: #212529;
+  }
+
+  .range.sub-text {
+    font-size: 1em;
+    color: #adb5bd;
+  }
+
+  .section-subitem-subheader.sub-text {
+    font-size: 1em;
+    color: #adb5bd;
+  }
+}
+
+section.summary {
+  .summary-list {
+    margin: -2px 0 0 18px;
+    font-size: 14px;
+    color: #868e96;
+
+    .summary-item {
+      line-height: 2em;
+    }
+  }
+}

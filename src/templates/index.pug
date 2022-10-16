@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= "简历编辑器"
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", type="text/css", href="./css/all.min.css")
+    link(rel="stylesheet", type="text/css", href="./css/fontawesome.min.css")
+    link(rel="stylesheet", type="text/css", href="./css/resume.min.css")
+  body
+    .container
+      header
+        section.info
+          .info-item.name= info.name
+          //- .info-item.status= info.status
+          .info-item.sub-text
+            span.location= info.location
+            span.intention= info.intention
+          .info-item.sub-text
+            span.sub-item
+              i.fas.fa-mobile-alt
+              span.phone= info.phone
+            span.sub-item
+              i.fas.fa-envelope
+              span.email
+                a(href="mailto:" + info.email)= info.email
+          .info-item.languages
+            each value in info.languages
+              span.language= value
+      content
+        section.section-item.experiences
+          .section-header
+            .section-title= "工作经历"
+            .section-headerline
+          .section-content
+            each experience in experiences
+              .section-subitem
+                .section-subitem-header
+                  span.company-name= experience.company
+                  span.range.sub-text= experience.range
+                .section-subitem-subheader.sub-text= experience.position
+                .desc.sub-text= experience.desc
+                .techs-container
+                  each tech in experience.techs
+                      span.tech= tech
+                each project in experience.projects
+                  .project-section
+                    .project-name= project.name
+                    .project-desc= project.desc
+                    ul.project-detail
+                      each detail in project.details
+                        li.detail= detail
+        section.section-item.personal-projects
+          .section-header
+            .section-title= "个人项目"
+            .section-headerline
+          .section-content
+            each project in personalProjects
+              .project-section
+                .project-name
+                  a(href=project.url target="_blank")= project.name
+                .project-desc= project.desc
+                if project.details.length
+                  ul.project-detail
+                    each detail in project.details
+                      li.detail= detail
+                .project-techs
+                  each tech in project.techs
+                    span.tech= tech
+        section.section-item.education
+          .section-header
+            .section-title= "教育经历"
+            .section-headerline
+          .section-content
+            each edu in education
+              .section-subitem
+                .section-subitem-header
+                  span.school-name= edu.school
+                  span.range.sub-text= edu.startTime + " ~ " + edu.endTime
+                .section-subitem-subheader.sub-text= edu.education + " - " + edu.major
+        section.section-item.summary
+          .section-header
+            .section-title= "自我评价"
+            .section-headerline
+          .section-content
+            each item in summary
+              ul.summary-list
+                li.summary-item= item

@@ -1,0 +1,26 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "A resume editor",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "pdf": "gulp pdf"
+  },
+  "keywords": [
+    "resume",
+    "简历"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "puppeteer": "^18.0.5",
+    "sass": "^1.55.0"
+  }
+}
